@@ -81,7 +81,7 @@ public class api {
 
 
     public List<Pair<Integer,Double>> get_all_clustering_coefficients(){
-        Collections.sort(clustering_coefficients, (a, b) -> a.getValue() < b.getValue() ? -1 : a.getValue() == b.getValue() ? 0 : 1);
+        Collections.sort(clustering_coefficients, (a, b) -> a.getValue() < b.getValue() ? 1 : a.getValue() == b.getValue() ? 0 : -1);
         return clustering_coefficients;
     }
 
