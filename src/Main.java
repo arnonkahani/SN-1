@@ -8,5 +8,6 @@ public class Main {
         temp.calculate_clustering_coefficients();
         temp.get_all_clustering_coefficients();
         temp.get_average_clustering_coefficient();
+        System.out.println(temp.get_clustering_coefficient(5));
     }
 }
