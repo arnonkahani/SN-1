@@ -57,7 +57,7 @@ public class api {
                         }
                     }
                 }
-                coefficients = 2*e/(k*(k-1));
+                coefficients = e/(k*(k-1));
                 sumCoefficients += coefficients;
             }
             clustering_coefficients.add(new Pair<>(node,coefficients));
@@ -101,5 +101,14 @@ public class api {
             neighbors2.add(nodeList.get(i).getKey());
             graph.put(nodeList.get(i).getValue(),neighbors2);
         }
+    }
+
+    public ArrayList<Pair<Integer,Double>> get_top_nodes(int k){
+        ArrayList<Pair<Integer,Double>> k_top_nodes = new ArrayList<Pair<Integer,Double>>();
+        get_all_clustering_coefficients();
+        for (int i = k; i > 0; i--) {
+            k_top_nodes.add(clustering_coefficients.get(i));
+        }
+        return k_top_nodes;
     }
 }
