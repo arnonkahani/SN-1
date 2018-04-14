@@ -7,7 +7,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args)throws Exception{
         api temp = new api();
-        temp.load_graph("Karate.csv");
+        temp.load_graph("LesMisreblas_proccesed.csv");
         temp.calculate_clustering_coefficients();
         temp.get_all_clustering_coefficients();
         System.out.println(temp.get_average_clustering_coefficient());
